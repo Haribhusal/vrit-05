@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio</title>
+    <style>
+      .prabin {
+        height: 300px;
+        width: 500px;
+        background-color: yellow;
+        font-size: 60px;
+        /* margin: 0 auto; */
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div class="prabin">Prabin</div>
+    </div>
+
+    <audio id="myAudio" controls src="myaudio.mp3"></audio>
+
+    <p>
+      Volume:
+      <input
+        type="range"
+        id="volumeSlider"
+        min="0"
+        max="1"
+        step="0.3"
+        value="0.5"
+      />
+    </p>
+
+    <!-- Controls -->
+    <button id="playbtn">Stay here to play sound</button>
+
+    <button class="tets" onclick="alert('I am clickedss')">Click</button>
+
+    <script>
+      // Select the html  audio element
+      let sound = document.getElementById("myAudio");
+      //   hide the sound bar
+      sound.style.display = "none";
+      let playController = document.getElementById("playbtn");
+      let pauseController = document.getElementById("pausebtn");
+
+      const volumeSlider = document.getElementById("volumeSlider");
+
+      // Set the initial volume based on the slider value
+      sound.volume = volumeSlider.value;
+
+      volumeSlider.addEventListener("input", function () {
+        // Update the audio volume based on the slider value
+        sound.volume = volumeSlider.value;
+      });
+
+      playController.addEventListener("mouseenter", function () {
+        sound.play();
+      });
+      playController.addEventListener("mouseleave", function () {
+        sound.pause();
+      });
+    </script>
+  </body>
+</html>

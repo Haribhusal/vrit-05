@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        height: 500px;
+        width: 500px;
+        position: relative;
+        background-color: yellow;
+      }
+      .container .box {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        animation-name: moveTheBox;
+        animation-duration: 1s;
+        animation-direction: alternate;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+      }
+      @keyframes moveTheBox {
+        33% {
+          left: -100px;
+          top: -100px;
+        }
+
+        66% {
+          left: 100%;
+          top: 0;
+          background-color: purple;
+          border-radius: 0px;
+          transform: rotate(90deg);
+        }
+        100% {
+          left: 100%;
+          top: 100%;
+          background-color: green;
+          border-radius: 100px;
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

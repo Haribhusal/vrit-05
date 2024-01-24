@@ -1,0 +1,20 @@
+@media screen and (max-width: 992px) {
+  header .menu {
+    display: none;
+  }
+  .info {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .info img {
+    width: 100%;
+  }
+  .serviceGrid {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 992px) {
+  .toggler {
+    display: none;
+  }
+}

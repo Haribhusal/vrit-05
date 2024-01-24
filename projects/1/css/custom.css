@@ -1,0 +1,50 @@
+.myheader {
+  background-color: red;
+}
+
+.customNavbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.customNavbar .custom-nav-link {
+  color: white;
+}
+.customNavbar .custom-nav-link.active {
+  color: white;
+}
+.customNavbar .navbar-brand {
+  color: white;
+  font-size: 40px;
+}
+
+/* 
+.heroImage::before {
+  content: "";
+  position: absolute;
+  bottom: -80%;
+  left: -30%;
+  z-index: 99;
+  height: 500px;
+  width: 1000px;
+  background-color: white;
+  transform: rotate(30deg);
+}
+.heroImage::after {
+  content: "";
+  position: absolute;
+  bottom: -80%;
+  right: -30%;
+  z-index: 99;
+  height: 500px;
+  width: 1000px;
+  background-color: white;
+  transform: rotate(-30deg);
+} */
+
+.heroImage {
+  margin-top: -300px;
+}

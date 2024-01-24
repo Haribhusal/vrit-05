@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: grid;
+        /* justify-items: start; */
+
+        color: #fff;
+        gap: 30px;
+        height: 100vh;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        grid-template-areas:
+          "header header header header header  header header header header header "
+          "header header header header header  header header header header header "
+          "aside aside aside  main main main main main main main"
+          "aside aside aside  main main main main main main main"
+          "aside aside aside  main main main main main main main"
+          "aside aside aside  main main main main main main main"
+          "aside aside aside  main main main main main main main"
+          "aside aside aside  main main main main main main main"
+          "foot foot foot foot foot foot foot foot foot foot"
+          "foot foot foot foot foot foot foot foot foot foot";
+      }
+      header {
+        grid-area: header;
+
+        background-color: red;
+      }
+      aside {
+        grid-area: aside;
+        background-color: black;
+      }
+      main {
+        grid-area: main;
+        background-color: yellow;
+      }
+      footer {
+        grid-area: foot;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="item">This is header</header>
+    <aside class="item">This is sidebar</aside>
+    <main class="item">hey</main>
+    <footer class="item">This is footer</footer>
+  </body>
+</html>

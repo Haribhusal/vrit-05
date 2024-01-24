@@ -1,0 +1,52 @@
+@import "variables";
+// Variable
+// Import / Partials
+// Nesting
+@import "settings";
+
+@mixin buttonStyles($paddingY, $bgColor) {
+  padding: $paddingY 25px;
+  background-color: $bgColor;
+  border-radius: 10px;
+  border: none;
+  font-size: 24px;
+  color: white;
+  &:hover {
+    background-color: red;
+  }
+}
+header {
+  background-color: $primaryColor;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .menu {
+    nav {
+      display: flex;
+      a {
+        color: white;
+        display: block;
+        padding: 15px 25px;
+        &:last-child {
+          background-color: black;
+        }
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+header button {
+  @include buttonStyles(0px, black);
+}
+
+button {
+  @include buttonStyles(10px, green);
+}
+
+.hero button {
+  @include buttonStyles(30px, orange);
+}

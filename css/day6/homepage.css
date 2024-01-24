@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+h3 {
+  font-size: 3em;
+  color: rebeccapurple;
+}
+.btn {
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: rebeccapurple;
+}
+.btn:hover {
+  background-color: rgba(128, 0, 128, 0.793);
+}
+a:link {
+  text-decoration: none;
+  color: currentColor;
+}
+header {
+  display: flex;
+  align-items: center;
+  padding: 15px 7%;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  justify-content: space-between;
+}
+header .logo {
+  font-size: 30px;
+  color: rebeccapurple;
+}
+
+header .menu nav {
+  display: flex;
+  gap: 20px;
+}
+
+header .buttons {
+  display: flex;
+  gap: 20px;
+}
+
+main {
+  padding: 30px 7%;
+}
+
+.info {
+  display: flex;
+}
+
+.info .content,
+.about .content,
+.services .service {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: self-start;
+}
+.services h3 {
+  font-size: 24px;
+}
+main section {
+  padding: 60px 0;
+}
+footer {
+  padding: 30px 7%;
+  background-color: black;
+  color: white;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+.serviceGrid > div {
+  padding: 30px;
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out;
+  border: 1px dotted rgba(128, 0, 128, 0.336);
+}
+
+.serviceGrid > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}

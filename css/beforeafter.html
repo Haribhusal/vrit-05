@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Before and After</title>
+    <style>
+      div::before {
+        content: "";
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        position: absolute;
+        top: 0;
+        border-radius: 100px;
+        left: 0;
+      }
+      div::after {
+        content: "This is after";
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="https://picsum.photos/id/41/300/300" alt="" />
+      <img src="https://picsum.photos/id/41/300/300" alt="" />
+      <img src="https://picsum.photos/id/41/300/300" alt="" />
+      <img src="https://picsum.photos/id/41/300/300" alt="" />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropdown</title>
+
+    <style>
+      a:link {
+        text-decoration: none;
+        color: #333;
+      }
+      nav {
+        background-color: yellow;
+      }
+      nav > div {
+        display: inline-block;
+        padding: 10px;
+        text-decoration: none;
+      }
+      nav .has-dropdown {
+        position: relative;
+      }
+      .has-dropdown .test {
+        /* display: none !important; */
+        position: absolute;
+        top: 20px;
+        left: 0;
+        /* height: 300px; */
+        width: 100px;
+        list-style: none;
+        border: 1px solid gray;
+        padding: 10px;
+        background-color: white;
+        z-index: 9;
+        display: none;
+        pointer-events: none;
+      }
+
+      .has-dropdown input {
+        display: none;
+      }
+      .has-dropdown input:checked + .test {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <a href="#">Home</a>
+      </div>
+
+      <div class="has-dropdown">
+        <label for="check">About</label>
+        <input type="checkbox" id="check" />
+        <ul class="test">
+          <li>
+            <a href="#">Team</a>
+          </li>
+          <li>
+            <a href="#">Mission</a>
+          </li>
+          <li>
+            <a href="#">Vision</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <a href="#">Services</a>
+      </div>
+      <div>
+        <a href="#">Contact</a>
+      </div>
+      <div>
+        <a href="#">Blog</a>
+      </div>
+    </nav>
+  </body>
+</html>

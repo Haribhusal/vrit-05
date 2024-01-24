@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        color: white;
+        font-size: 30px;
+        border: 1px solid yellow;
+        text-align: center;
+        line-height: 100px;
+      }
+      .container {
+        display: flex;
+        gap: 30px;
+      }
+      .box:nth-child(3) {
+        order: 2;
+      }
+      .box:nth-child(1) {
+        order: 3;
+      }
+      .box:nth-child(2) {
+        order: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+  </body>
+</html>

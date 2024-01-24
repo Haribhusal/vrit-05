@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 500px;
+        width: 300px;
+        background-color: yellow;
+        position: relative;
+        cursor: pointer;
+      }
+      .box img {
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translateY(-50%) translateX(-50%);
+        border-radius: 30px;
+        transition: all 0.5s ease;
+        z-index: -1;
+      }
+      .box:hover img {
+        left: 100%;
+        transform: translateY(-50%) translateX(-20%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="https://picsum.photos/id/55/200/200" alt="" />
+    </div>
+  </body>
+</html>

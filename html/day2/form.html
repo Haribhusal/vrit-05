@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML FORMS</title>
+  </head>
+  <body>
+    <h1>HTML FORM</h1>
+    <form>
+      <div>
+        <label>Enter your name</label>
+        <input type="text" placeholder="Enter name here" required />
+      </div>
+      <div>
+        <label>Enter your Email</label>
+        <input type="email" placeholder="Enter email here" value="" readonly />
+      </div>
+      <div>
+        <label>Enter your Password</label>
+        <input type="password" placeholder="Enter password here" />
+      </div>
+      <div>
+        <label>Enter your photo</label>
+        <input type="file" />
+      </div>
+
+      <div>
+        <label for="">Select your country</label>
+        <select>
+          <option value="" selected disabled>Select Country</option>
+          <option value="1">Nepal</option>
+          <option value="2">India</option>
+          <option value="3">Pakistan</option>
+          <option value="4">Bhutan</option>
+          <option value="5">Shri Lanka</option>
+          <option value="6">USA</option>
+          <option value="7">Australia</option>
+          <option value="8">UK</option>
+        </select>
+      </div>
+
+      <div>
+        <h5>Select your gender</h5>
+        <div>
+          <input type="radio" id="male" name="genderselection" />
+          <label for="male">Male</label>
+        </div>
+        <div>
+          <input type="radio" id="female" name="genderselection" />
+          <label for="female">Female</label>
+        </div>
+        <div>
+          <input type="radio" id="others" name="genderselection" />
+          <label for="others">Others</label>
+        </div>
+      </div>
+
+      <div>
+        <h5>Select the game you want to play</h5>
+
+        <div>
+          <input type="checkbox" id="cric" />
+          <label for="cric">Cricket</label>
+        </div>
+        <div>
+          <input type="checkbox" id="foot" />
+          <label for="foot">Football</label>
+        </div>
+        <div>
+          <input type="checkbox" id="basket" />
+          <label for="basket">Basketball</label>
+        </div>
+        <div>
+          <input type="checkbox" id="minton" />
+          <label for="minton">Badminton</label>
+        </div>
+      </div>
+
+      <div>
+        <label for="date">Enter your DOB</label>
+        <input type="date" />
+      </div>
+      <button type="submit">Submit Now</button>
+    </form>
+  </body>
+</html>

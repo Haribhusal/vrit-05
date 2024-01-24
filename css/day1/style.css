@@ -1,0 +1,16 @@
+/* here h1 is selector */
+/* {} this is a block/set of rules/ set of properties and values */
+/* here background-color is a property */
+/* red is value */
+/* ; terminates the set */
+h1 {
+  /* External CSS */
+  /* This is css comment */
+  /* This
+        is
+        multiline
+        comment  */
+  background-color: green;
+  color: white;
+  font-size: 100px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas width="200" id="myCanvas" height="100"></canvas>
+
+    <canvas
+      width="200"
+      height="100"
+      id="myCircle"
+      style="background-color: red"
+    ></canvas>
+
+    <script>
+      // This is code to draw a circle
+      let circleDiv = document.getElementById("myCircle");
+      let context = circleDiv.getContext("2d");
+      context.beginPath();
+      context.arc(100, 50, 50, 10, 2 * Math.PI);
+      context.stroke();
+
+      //   Line Draw
+
+      let canvaaas = document.getElementById("myCanvas");
+      let ctx = canvaaas.getContext("2d");
+      ctx.moveTo(0, 0);
+      ctx.lineTo(100, 50);
+      ctx.stroke();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        position: relative;
+        height: 300px;
+        margin: 50px auto;
+        width: 300px;
+        background-color: yellow;
+        overflow: hidden;
+      }
+      .box::before {
+        content: "New";
+        position: absolute;
+        right: -30px;
+        top: 10px;
+        color: white;
+        transform: rotate(45deg);
+        height: 30px;
+        line-height: 30px;
+        width: 100px;
+        text-align: center;
+        background-color: red;
+      }
+
+      button {
+        padding: 30px 50px;
+        font-size: 30px;
+        border: 2px solid black;
+
+        background-color: yellow;
+        position: relative;
+      }
+      button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -25px;
+
+        z-index: 99;
+        border-right: 50px solid yellow;
+        border-left: 50px solid transparent;
+        border-top: 50px solid transparent;
+        border-bottom: 50px solid transparent;
+      }
+
+      nav {
+        padding: 20px 30px;
+        background-color: yellow;
+        margin: 50px auto;
+        width: 80%;
+        transform: skew(20deg);
+      }
+      nav .content {
+        transform: skew(-20deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+
+    <button>Read More</button>
+
+    <nav>
+      <div class="content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 1</a>
+        <a href="#">Link 1</a>
+        <a href="#">Link 1</a>
+      </div>
+    </nav>
+  </body>
+</html>
