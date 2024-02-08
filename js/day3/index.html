@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="converter(event)">
+      <h3>USD to NPR Converter</h3>
+      <h1>Result: <span id="result"></span></h1>
+      <input type="number" id="inputAmount" />
+      <button>Covert Now</button>
+    </form>
+    <script>
+      function converter(e) {
+        e.preventDefault();
+        let userEnteredValue = document.getElementById("inputAmount").value;
+        let result = userEnteredValue * 133.59;
+        document.getElementById("result").innerText = result;
+      }
+    </script>
+  </body>
+</html>
