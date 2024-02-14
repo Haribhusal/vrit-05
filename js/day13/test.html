@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="heading"></div>
+    <div class="wrapper"></div>
+    <script>
+      let wrapperDiv = document.querySelector(".wrapper");
+      let headerCreated = document.createElement("header");
+      headerCreated.innerHTML = '<div class="logo">L</div>';
+      wrapperDiv.append(headerCreated);
+      let name = localStorage.getItem("myname");
+      document.querySelector(".heading").innerHTML = `<h1>${name}</h1>`;
+    </script>
+  </body>
+</html>

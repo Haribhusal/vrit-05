@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="animate"></div>
+    </div>
+    <h1 id="heading">Hello</h1>
+    <button onclick="increaseFontSize()">Increase size</button>
+    <script>
+      let title = document.getElementById("heading");
+      let size = 20;
+      function increaseFontSize() {
+        size += 10;
+        console.log(size);
+        title.style.fontSize = `${size}px`;
+      }
+
+      function myMove() {
+        let id = null;
+        const elem = document.getElementById("animate");
+        let pos = 0;
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        function frame() {
+          if (pos == 350) {
+            clearInterval(id);
+          } else {
+            pos++;
+            elem.style.top = pos + "px";
+            elem.style.left = pos + "px";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
