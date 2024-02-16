@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primaryColor: rgba(3, 158, 164, 1);
+  --secondaryColor: rgba(116, 0, 158, 1);
+}
+
+body {
+  background: var(--primaryColor);
+  background: linear-gradient(
+    90deg,
+    var(--primaryColor) 0%,
+    var(--secondaryColor) 100%
+  );
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoContainer {
+  max-width: 700px;
+  width: 100%;
+  background-color: white;
+  min-height: 300px;
+  padding: 30px;
+}
+
+.heading {
+  & h1 {
+    background: -webkit-linear-gradient(
+      var(--primaryColor),
+      var(--secondaryColor)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.input {
+  margin: 30px 0;
+  & form {
+    display: flex;
+    justify-content: space-between;
+    & input {
+      padding: 20px;
+      width: 100%;
+      border: 2px solid var(--primaryColor);
+      outline: none;
+      &:hover {
+        border-color: var(--secondaryColor);
+      }
+      &:focus {
+        border-color: var(--secondaryColor);
+        box-shadow: none;
+      }
+    }
+    & button {
+      background-color: var(--secondaryColor);
+      color: white;
+      padding: 20px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.list {
+  padding-left: 30px;
+  & ul {
+    list-style: none;
+
+    & li {
+      position: relative;
+      padding: 10px 15px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 10px;
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(255, 173, 173, 0.359);
+      }
+      & button {
+        background-color: var(--secondaryColor);
+        border: none;
+        height: 40px;
+        color: white;
+        width: 40px;
+        border-radius: 50%;
+        font-size: 22px;
+        cursor: pointer;
+      }
+      &::before {
+        content: "\f5ad";
+        top: 50%;
+        transform: translateY(-50%);
+        left: -35px;
+        color: var(--secondaryColor);
+        font-size: 30px;
+        z-index: 999;
+        font-family: "Line Awesome Free";
+        font-weight: 900;
+        position: absolute;
+      }
+      & p {
+        font-size: 20px;
+        color: gray;
+      }
+    }
+  }
+}
